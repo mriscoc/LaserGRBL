@@ -334,7 +334,7 @@
             this.MnExit});
             this.MnGrbl.Name = "MnGrbl";
             resources.ApplyResources(this.MnGrbl, "MnGrbl");
-            this.MnGrbl.Click += new System.EventHandler(this.MnGrbl_Click);
+
             // 
             // MnConnect
             // 
