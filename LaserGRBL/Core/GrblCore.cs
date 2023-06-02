@@ -3320,10 +3320,11 @@ namespace LaserGRBL
 
 		public GrblCore.GrblVersionInfo GrblVersion => mVersion;
 		private bool NoVersionInfo => mVersion == null;
+		private bool Falcon => mVersion == new GrblCore.GrblVersionInfo(1, 3, 'a');
 		private bool Version11 => mVersion != null && mVersion >= new GrblCore.GrblVersionInfo(1, 1);
 		private bool Version9 => mVersion != null && mVersion >= new GrblCore.GrblVersionInfo(0, 9);
 
-		public int ExpectedCount => Version11 ? 34 : Version9 ? 31 : 23;
+		public int ExpectedCount => Falcon ? 30 : Version11 ? 34 : Version9 ? 31 : 23;
 		public bool HomingEnabled => ReadDecimal(Version9 ? 22 : 17, 1) != 0;
 		public decimal MaxRateX => ReadDecimal(Version9 ? 110 : 4, 4000);
 		public decimal MaxRateY => ReadDecimal(Version9 ? 111 : 5, 4000);

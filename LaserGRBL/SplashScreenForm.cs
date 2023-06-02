@@ -19,7 +19,7 @@ namespace LaserGRBL
 			InitializeComponent();
 			this.Size = BackgroundImage.Size;
 			this.DoubleBuffered = true;
-			mVersion = "v" + Program.CurrentVersion.ToString(3);
+			mVersion = "v" + Program.CurrentVersion.ToString(3) + " - Falcon edition";
 		}
 
 		protected override void OnPaint(PaintEventArgs e)
